@@ -1,0 +1,289 @@
+@font-face {
+	font-family: "Colfax";
+	src: url("/fonts/Colfax-Medium.ttf") format("truetype");
+	font-weight:500;
+}
+@font-face {
+	font-family: "Colfax";
+	src: url("/fonts/Colfax-regular.ttf") format("truetype");
+	font-weight:400;
+}
+
+/*Backgrounds*/
+html{
+	background-color: #0A1119;
+	box-sizing: border-box; 
+}
+
+/*Type*/
+html {
+	font-size: 62.5%; }
+
+body {
+	font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: "Colfax", sans-serif;
+	color: #FFF; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-weight: 300; }
+h1 { font-size: 2.8rem; line-height: 1.4; letter-spacing: 0rem; font-weight: 500;}
+h2 { font-size:	1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #306AFF; font-family: "roboto-mono", monospace;}
+p  { font-size: 1.6rem; line-height: 1.5; letter-spacing: 0rem; color: #708599;}
+
+a  { font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #708599; text-decoration: none;}
+a:hover{color: #fff;}
+
+/*Inputs*/
+input{
+	font-family: "Colfax", sans-serif;
+	font-size:1.4rem;
+	box-sizing: border-box; 
+}
+input[type=email]{
+	height: 56px;
+	border-radius: 2px;
+	border: 0px;
+	padding-left: 16px;
+	display: inline-block;
+	width: calc(100%);
+}
+input[type=submit]{
+	height: 56px;
+	width:108px;
+	border-radius: 0px 2px 2px 0px;
+	border: 0px;
+	background-color: #306AFF;
+	color: white;
+	font-weight: 500;
+	border: 6px solid #fff;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.inputContainer{
+	position: relative;
+}
+
+/*Layout system*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+nav{
+	margin-top: 32px;
+}
+.hero-visual{
+	margin-top: 64px;
+	position: relative;
+}
+
+#hero-bg{
+	height: 480px;
+	position: absolute;
+	top: -48px;
+	right: 0px;
+	z-index: -10;
+}
+header h2{
+	color: #708599; 
+}
+
+.hero-description{
+	margin-top: 88px;
+}
+.socialProof{
+	margin-top: 88px;
+}
+.beautiful, .automatic, .custom, .cta, footer{
+	margin-top: 160px;
+}
+.nav-right{
+	display: flex;
+	justify-content: space-between;
+}
+.beautiful, .automatic{
+	display: flex;
+	align-items: center;
+}
+.beautiful-illustration, .automatic-illustration{
+	position: relative;
+	height: 480px;
+}
+#beautiful-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 480px;
+}
+#beautiful-bg{
+	position: absolute;
+	top: 32px;
+	right: -32px;
+	height: 480px;
+}
+#automatic-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 480px;
+}
+#automatic-bg{
+	position: absolute;
+	top: 0px;
+	left: -32px;
+	height: 480px;
+}
+
+#custom-bg{
+	position: absolute;
+	top: 0px;
+	right: -128px;
+	height: 480px;
+	z-index: -10;
+}
+#gradientCircle{
+	position: absolute;
+	top: 56px;
+	right:-101px;
+	width: 202px;
+	z-index: -5;
+}
+
+.custom{
+	position: relative;
+}
+.hotKey{
+	color: white;
+	background-color: #306AFF;
+	padding: 4px 8px 1px 8px;
+	border-radius: 16px;
+}
+
+.logos, .tweet{
+	height: 160px;
+}
+.logos{
+	background-color: #306AFF;
+}
+.tweet{
+	background-color: #0D151F;
+}
+.custom-table{
+	margin-top: 32px;
+	height: 400px;
+	background: #0D151F;
+	border-radius: 2px;
+}
+
+footer{
+	background-color: #FF511B;
+	padding: 48px 0px 48px 0px;
+}
+footer img{
+	width: 100%;
+}
+footer h1{
+	font-family: freight-neo-pro, sans-serif;
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.8rem;
+}
+footer p{
+	font-family: "freight-text-pro", serif;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.7rem;
+	opacity: 0.8;
+}
+footer h2{
+	color: #fff;
+	opacity: 0.6;
+}
+
+
+

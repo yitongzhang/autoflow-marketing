@@ -1,18 +1,18 @@
 @font-face {
 font-family: 'Colfax';
-src: url('ColfaxWebRegular.eot');
-src: url('ColfaxWebRegular.eot?#iefix') format('embedded-opentype'),
-     url('ColfaxWebRegular.woff2') format('woff2'),
-     url('ColfaxWebRegular.woff') format('woff');
+src: url('fonts/ColfaxWebRegular.eot');
+src: url('fonts/ColfaxWebRegular.eot?#iefix') format('embedded-opentype'),
+     url('fonts/ColfaxWebRegular.woff2') format('woff2'),
+     url('fonts/ColfaxWebRegular.woff') format('woff');
 font-weight: 400;
 }
 
 @font-face {
 font-family: 'Colfax';
-src: url('ColfaxWebMedium.eot');
-src: url('ColfaxWebMedium.eot?#iefix') format('embedded-opentype'),
-     url('ColfaxWebMedium.woff2') format('woff2'),
-     url('ColfaxWebMedium.woff') format('woff');
+src: url('fonts/ColfaxWebMedium.eot');
+src: url('fonts/ColfaxWebMedium.eot?#iefix') format('embedded-opentype'),
+     url('fonts/ColfaxWebMedium.woff2') format('woff2'),
+     url('fonts/ColfaxWebMedium.woff') format('woff');
 font-weight: 500;
 }
 
@@ -118,7 +118,7 @@ input[type=email]:focus{
   float: left;
   box-sizing: border-box; }
 
-@media (min-width: 550px) {
+@media (min-width: 1000px) {
   .container {
     width: 80%; }
   .column,
@@ -364,5 +364,7 @@ footer h2:hover{
 }
 
 
+@media(max-width: 1000px) {
 
+}
 

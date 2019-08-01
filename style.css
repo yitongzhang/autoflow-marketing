@@ -26,6 +26,7 @@ footer h2, a{
 html{
 	background-color: #0A1119;
 	box-sizing: border-box; 
+	width: 100%;
 }
 
 /*Type*/
@@ -363,8 +364,33 @@ footer h2:hover{
 	opacity: 1;
 }
 
+.mobile-hack{
+	display: none;
+}
 
 @media(max-width: 1000px) {
-
+	.desktop-hack{
+		display: none;
+	}
+	.mobile-hack{
+	display: block;
+	}
+	.mobile-hack img{
+		width:100%;
+	}
+	.mobile-hack p{
+		margin:8px 0px 32px 0px;
+	}
+	.mobile-hack .content{
+		width:80%;
+		max-width: 480px;
+		margin:0 auto;
+	}
+	#mc_embed_signup input[type=submit]{
+		top:13px;
+	}
+	.container{
+		padding:0;
+	}
 }
 

@@ -1,12 +1,25 @@
 @font-face {
-	font-family: "Colfax";
-	src: url("/fonts/Colfax-Medium.ttf") format("truetype");
-	font-weight:500;
+font-family: 'Colfax';
+src: url('ColfaxWebRegular.eot');
+src: url('ColfaxWebRegular.eot?#iefix') format('embedded-opentype'),
+     url('ColfaxWebRegular.woff2') format('woff2'),
+     url('ColfaxWebRegular.woff') format('woff');
+font-weight: 400;
 }
+
 @font-face {
-	font-family: "Colfax";
-	src: url("/fonts/Colfax-regular.ttf") format("truetype");
-	font-weight:400;
+font-family: 'Colfax';
+src: url('ColfaxWebMedium.eot');
+src: url('ColfaxWebMedium.eot?#iefix') format('embedded-opentype'),
+     url('ColfaxWebMedium.woff2') format('woff2'),
+     url('ColfaxWebMedium.woff') format('woff');
+font-weight: 500;
+}
+
+/*Transition*/
+footer h2, a{
+  transition: opacity 0.3s, box-shadow 0.3s;
+
 }
 
 /*Backgrounds*/
@@ -17,14 +30,18 @@ html{
 
 /*Type*/
 html {
-	font-size: 62.5%; }
+	font-size: 62.5%; 
+	scroll-behavior: smooth;
+}
 
 body {
 	font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
 	line-height: 1.6;
 	font-weight: 400;
 	font-family: "Colfax", sans-serif;
-	color: #FFF; }
+	color: #FFF;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
@@ -34,8 +51,8 @@ h1 { font-size: 2.8rem; line-height: 1.4; letter-spacing: 0rem; font-weight: 500
 h2 { font-size:	1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #306AFF; font-family: "roboto-mono", monospace;}
 p  { font-size: 1.6rem; line-height: 1.5; letter-spacing: 0rem; color: #708599;}
 
-a  { font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #708599; text-decoration: none;}
-a:hover{color: #fff;}
+a  { font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #fff; text-decoration: none; opacity: 0.6;}
+a:hover{opacity: 1;}
 
 /*Inputs*/
 input{
@@ -50,24 +67,41 @@ input[type=email]{
 	padding-left: 16px;
 	display: inline-block;
 	width: calc(100%);
+	margin-top:8px;
+	box-shadow: 2px 16px 40px rgba(0,0,0,0);
 }
-input[type=submit]{
-	height: 56px;
-	width:108px;
-	border-radius: 0px 2px 2px 0px;
-	border: 0px;
-	background-color: #306AFF;
-	color: white;
+input[type=email]:focus{
+	outline:none; 
+	box-shadow: 2px 16px 40px rgba(0,0,0,1);
+}
+#mc_embed_signup input[type=submit]{
+	padding: 14px 24px;
+	font-size: 14px;
+	text-transform: uppercase;
 	font-weight: 500;
-	border: 6px solid #fff;
-	display: inline-block;
+	color: #fff;
+	background-color:#306AFF;
+	border: 0px;
+	border-radius: 2px; 
+	display: inline;
 	position: absolute;
-	right: 0;
-	top: 0;
+	top: 37px;
+	right: 5px;
+}
+.cta #mc_embed_signup input[type=submit]{
+	top:13px;
+}
+
+#mc_embed_signup label{
+	font-size:	1.2rem; line-height: 1.2; letter-spacing: 0.05rem; text-transform: uppercase; color: #708599; font-family: "roboto-mono", monospace; 
+}
+#mc_embed_signup_scroll{
+	position: relative;
 }
 
 .inputContainer{
 	position: relative;
+	padding-left: 56px;
 }
 
 /*Layout system*/
@@ -161,7 +195,16 @@ nav{
 	margin-top: 64px;
 	position: relative;
 }
-
+video{
+	box-shadow: 2px 16px 80px rgba(0,0,0,0.1);
+}
+#gradientCircle1{
+	position: absolute;
+	top: 276px;
+	right:201px;
+	width: 202px;
+	z-index: -5;
+}
 #hero-bg{
 	height: 480px;
 	position: absolute;
@@ -198,7 +241,7 @@ header h2{
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 480px;
+	height: 520px;
 }
 #beautiful-bg{
 	position: absolute;
@@ -210,7 +253,7 @@ header h2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 480px;
+	height: 522px;
 }
 #automatic-bg{
 	position: absolute;
@@ -226,10 +269,10 @@ header h2{
 	height: 480px;
 	z-index: -10;
 }
-#gradientCircle{
+#gradientCircle2{
 	position: absolute;
 	top: 56px;
-	right:-101px;
+	right:96px;
 	width: 202px;
 	z-index: -5;
 }
@@ -259,10 +302,41 @@ header h2{
 	background: #0D151F;
 	border-radius: 2px;
 }
+.custom-table .row{
+	height: 200px;
+	display: flex;
+	align-items: center;
+}
+.line-container img{
+	width: 176px;
+}
 
+.line-container{
+	width: 33.33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #050F19;
+	height: 200px;
+	position: relative;
+}
+.line-container h2{
+	color: #708599;
+	position: absolute;
+	opacity: 0.4;
+}
+.line-container .tl{
+	top:20px;
+	left:20px;	
+}
+.line-container .tr{
+	top:20px;
+	right:20px;
+}
 footer{
 	background-color: #FF511B;
 	padding: 48px 0px 48px 0px;
+	position: relative;
 }
 footer img{
 	width: 100%;
@@ -284,6 +358,10 @@ footer h2{
 	color: #fff;
 	opacity: 0.6;
 }
+footer h2:hover{
+	opacity: 1;
+}
+
 
 
 

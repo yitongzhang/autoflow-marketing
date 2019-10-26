@@ -480,6 +480,9 @@ footer {
 .gusto img {
     height: 22px;
 }
+.notion img {
+    height: 32px;
+}
 .logo-headerRow,
 .twitter-timestamp {
     height: 40px;
